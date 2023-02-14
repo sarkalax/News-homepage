@@ -1,0 +1,90 @@
+main {
+    @media (min-width: $screenBrkpnt) {
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+        .mainText {
+            display: grid;
+            align-items: center;
+            gap: 5%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    img {
+    width: 100%;
+    margin-bottom: 5%;
+    }
+    .mainText {
+        height: fit-content;
+    }
+    .flexMain {
+        margin-bottom: 15%;
+
+        @media (min-width: $screenBrkpnt) {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2%;
+            margin-bottom: 5%;
+        }
+    }
+    aside {
+        padding: 7% 8%;
+        background: hsl(240, 100%, 5%);
+        h2 {
+            color: hsl(35, 77%, 62%);
+        }
+        h3 {
+            color: hsl(36, 100%, 99%);
+            &:hover {
+                transform-origin: left;
+                transform: scale(1.03);
+                color: hsl(5, 85%, 63%);
+            }
+        }
+        hr {
+            color: hsl(236, 13%, 42%);
+            width: 90%;
+            margin: auto;
+            margin-bottom: 30px;
+            opacity: .6;
+        }
+    }
+
+    .articles {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+
+        @media (min-width: $screenBrkpnt) {
+            flex-direction: row;
+        }
+
+        .flexArticles {
+            flex: 1;
+
+            display: flex;
+            gap: 5%;
+            margin-bottom: 5%;
+
+            img {
+                max-width: 40%;
+                max-height: auto;
+                margin-bottom: 0;
+            }
+            h2 {
+                color: hsl(233, 8%, 79%);
+                margin-bottom: 5%;
+            }
+            &:hover {
+                transform: scale(1.03);
+                h3 {
+                    color: hsl(5, 85%, 63%);
+                }
+            }
+        }
+    }
+}
